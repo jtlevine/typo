@@ -17,8 +17,11 @@ module NavigationHelpers
       '/'
     when /^the new article page$/
       '/admin/content/new'
+      
+    when /^the edit page for the article with the title "([^"]*)"$/
+      edit_admin_content_path(Article.find_by_title($1))
 
-    # Add more mappings here.
+    # Add more mappings here.2
     # Here is an example that pulls values out of the Regexp:
     #
     #   when /^(.*)'s profile page$/i
